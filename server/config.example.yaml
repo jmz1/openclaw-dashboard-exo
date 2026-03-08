@@ -1,0 +1,36 @@
+# EXO Dashboard — Server Configuration
+
+port: 8768
+
+# Optional — enables workspace-relative path display in the dashboard
+# workspace: /path/to/workspace
+
+paths:
+  # Required — core dashboard data sources
+  rules: /path/to/workspace/config/exo
+  self_review: /path/to/workspace/memory/self-review.md
+  telemetry_dir: /path/to/workspace/tmp/telemetry
+  heartbeat_state: /path/to/workspace/tmp/heartbeat-state.json
+  cron_jobs: /path/to/.openclaw/cron/jobs.json
+
+# How far back to load toollog/telemetry JSONL (days)
+history_days: 30
+
+# WebSocket heartbeat interval (seconds)
+ws_heartbeat: 30
+
+# Dashboard panel configuration (optional)
+# Controls which panels appear and in what order.
+# If omitted, the dashboard shows all core panels in default order.
+#
+# dashboard:
+#   panels:
+#     - id: exo-stats
+#     - id: events
+#     - id: rule-graph
+#     - id: cron
+#     - id: heartbeat
+#     - id: remembrall
+#     - id: metrics-rail
+#     # Custom panels load from panels/custom/<id>/panel.js
+#     # with optional server-side providers in server/providers/

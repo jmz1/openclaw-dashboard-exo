@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EXO Dashboard</title>
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-sans/style.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/geist@1.3.1/dist/fonts/geist-mono/style.min.css">
+  <link rel="stylesheet" href="core/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>%E2%97%86</text></svg>">
+</head>
+<body>
+  <div class="shell">
+
+    <!-- Header Strip -->
+    <header class="strip">
+      <div class="strip-left">
+        <span class="brand">EXO</span>
+        <span class="brand-sub">Behavioural Governance</span>
+      </div>
+      <div class="strip-right">
+        <span class="ws-dot" id="ws-dot" title="WebSocket disconnected"></span>
+        <time class="strip-time" id="strip-time"></time>
+      </div>
+    </header>
+
+    <!-- Panels mount here (order determined by config.js) -->
+    <main class="content" id="panels"></main>
+
+    <!-- Metrics Rail (bottom) -->
+    <div class="rail" id="metrics-rail"></div>
+
+    <!-- Footer -->
+    <footer class="strip strip-footer">
+      <span class="strip-muted">v4</span>
+      <span class="strip-muted" id="last-refresh"></span>
+      <button class="key-hint" id="help-btn" title="Keyboard shortcuts">?</button>
+    </footer>
+
+    <!-- Help Overlay -->
+    <div class="overlay" id="help-overlay">
+      <div class="overlay-box">
+        <h3>Keyboard Shortcuts</h3>
+        <table class="help-table">
+          <tbody id="help-shortcuts"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Tooltip (shared) -->
+    <div class="tip" id="tip"></div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7/dist/d3.min.js"></script>
+  <script type="module" src="core/app.js"></script>
+</body>
+</html>

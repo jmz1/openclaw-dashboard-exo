@@ -1,0 +1,23 @@
+[project]
+name = "exo-dashboard"
+version = "1.0.0"
+description = "Companion dashboard for the EXO behavioural governance extension"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+authors = [{ name = "jmz", url = "https://github.com/jmz1" }]
+
+dependencies = [
+    "fastapi>=0.110",
+    "uvicorn>=0.27",
+    "pyyaml>=6.0",
+    "watchfiles>=0.21",
+]
+
+[project.urls]
+Homepage = "https://github.com/jmz1/openclaw-dashboard-exo"
+Repository = "https://github.com/jmz1/openclaw-dashboard-exo"
+Issues = "https://github.com/jmz1/openclaw-dashboard-exo/issues"
+
+[project.optional-dependencies]
+dev = ["ruff", "mypy"]

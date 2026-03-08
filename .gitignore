@@ -1,0 +1,12 @@
+node_modules/
+__pycache__/
+*.pyc
+server/config.yaml
+
+# Custom server-side providers and parsers (user-specific)
+# Core + example providers are tracked; add custom ones here:
+server/providers/taskwarrior.py
+server/parsers/taskwarrior.py
+
+# Custom panels are user-specific, tracked in a separate repo
+dashboard/panels/custom/
